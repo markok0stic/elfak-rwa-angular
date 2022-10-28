@@ -18,21 +18,14 @@ export class NavbarComponent implements OnInit {
   constructor(private store: Store<AppState>, public router: Router) { }
 
   ngOnInit(): void {
-    this.store.subscribe((state) => {
-      if (state.userState.user) {
-        this.user = state.userState.user
-      }
-      else{
-        this.navigate('/login')
-      }
-    });
+    this.store.subscribe((state) => { this.user = state.userState.user });
   }
 
   handleLog() {
     if (this.user) {
       this.store.dispatch(logoutUser());
     } else {
-      this.router.navigate(['login']);
+      this.router.navigate(['']);
     }
   }
 

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sickdays'`, () => {
+  it(`should have as title 'Absence management'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sickdays');
+    expect(app.title).toEqual('Absence management');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('sickdays app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Absence management app is running!');
   });
 });

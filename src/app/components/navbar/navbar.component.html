@@ -1,15 +1,14 @@
 <mat-toolbar
   color="primary"
   class="navbar"
-  *ngIf="this.router.url !== '/login' && this.router.url !== '/register'">
-
+  *ngIf="this.user">
   <div class="login-div">
     <button
       mat-raised-button
       color="accent"
       (click)="handleLog()">
-      {{ user ? "Log Out" : "Log In" }}
+      Log Out
     </button>
   </div>
-
 </mat-toolbar>
+<app-login class="am-login-wrapper" *ngIf="this.user === null"></app-login>
