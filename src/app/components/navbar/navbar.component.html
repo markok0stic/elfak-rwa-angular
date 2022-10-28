@@ -1,0 +1,15 @@
+<mat-toolbar
+  color="primary"
+  class="navbar"
+  *ngIf="this.router.url !== '/login' && this.router.url !== '/register'">
+
+  <div class="login-div">
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="handleLog()">
+      {{ user ? "Log Out" : "Log In" }}
+    </button>
+  </div>
+
+</mat-toolbar>
