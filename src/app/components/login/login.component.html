@@ -6,7 +6,7 @@
   </div>
   <div class="am-login-right">
     <label style="font-size: 25px; font-weight: bolder">Log In</label>
-    <mat-card class="example-card mat-elevation-z10">
+    <mat-card class="am-login-pad">
       <mat-card-content>
         <form class="form-items">
           <mat-form-field appearance="outline">
@@ -19,12 +19,10 @@
             <input type="password" name="password" [formControl]="password" required matInput placeholder="******"/>
             <mat-error *ngIf="password.invalid">Please insert your password</mat-error>
           </mat-form-field>
-          <button
+          <button class="am-login-btn"
             mat-raised-button
-            color="primary"
             disabled="{{ loading }}"
-            (click)="handleSubmit()"
-          >
+            (click)="handleSubmit()">
             Log in
           </button>
         </form>

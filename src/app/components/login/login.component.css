@@ -12,6 +12,11 @@
   box-shadow: 0 3px 12px #0000001F;
   border-radius: 4px;
 }
+.am-login-pad{
+  margin-top:15px;
+  border: none;
+  box-shadow: none;
+}
 .am-login-img{
   width: 50%;
   padding-left: 45px;
@@ -23,6 +28,11 @@
   position: relative;
   z-index: 1;
 }
+.am-login-btn
+{
+  background-color: #282747;
+  color: white;
+}
 .am-login-image{
   position: relative;
   left: 30px;
@@ -32,11 +42,13 @@
 .am-login-welcome{
   font-size: 34px;
   font-weight: bold;
-  color: #000;
+  color: rgb(124,96,107);
   margin-left: 90px;
+  opacity: 30%;
 }
 .am-login-welcome:first-child{
-  margin: 0;
+  margin: 8px;
+  opacity: 100%;
 }
 .am-login-right{
   display: flex;

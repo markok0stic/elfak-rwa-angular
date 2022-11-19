@@ -31,6 +31,8 @@ import {MatBadgeModule} from "@angular/material/badge";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatListModule} from "@angular/material/list";
 import {MatInputModule} from "@angular/material/input";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -39,41 +41,43 @@ import {MatInputModule} from "@angular/material/input";
     NavbarComponent,
     RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
 
 
-    StoreModule.forRoot<AppState>({
-      userState: userReducer,
-    }),
-    EffectsModule.forRoot([
-      UserEffects
-    ]),
+        StoreModule.forRoot<AppState>({
+            userState: userReducer,
+        }),
+        EffectsModule.forRoot([
+            UserEffects
+        ]),
 
 
-    MatCardModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatButtonModule,
-    MatProgressBarModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatDividerModule,
-    MatStepperModule,
-    MatSelectModule,
-    MatRippleModule,
-    MatChipsModule,
-    MatBadgeModule,
-    MatDialogModule,
-    MatListModule,
-    ReactiveFormsModule,
-    MatInputModule,
-  ],
+        MatCardModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatButtonModule,
+        MatProgressBarModule,
+        MatSnackBarModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatDividerModule,
+        MatStepperModule,
+        MatSelectModule,
+        MatRippleModule,
+        MatChipsModule,
+        MatBadgeModule,
+        MatDialogModule,
+        MatListModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
+    ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
   ],

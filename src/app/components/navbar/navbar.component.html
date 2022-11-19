@@ -1,14 +1,20 @@
-<mat-toolbar
-  color="primary"
-  class="navbar"
-  *ngIf="this.user">
-  <div class="login-div">
-    <button
-      mat-raised-button
-      color="accent"
-      (click)="handleLog()">
-      Log Out
-    </button>
-  </div>
-</mat-toolbar>
-<app-login class="am-login-wrapper" *ngIf="this.user === null"></app-login>
+<div class="am-body-class" *ngIf="this.user !== null">
+  <app-login></app-login>
+</div>
+
+
+<mat-sidenav-container
+  class="am-sidenav"
+  *ngIf="this.user ===null">
+  <mat-sidenav-content class="am-sidenav-content">
+    <mat-list>
+      <mat-list-item (click)="handleLogOut()" class="am-sidenav-logo"></mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item (click)="handleLogOut()" class="am-btn-logout"><div class="am-sidenav-item">Log Out</div></mat-list-item>
+      <mat-list-item><div class="am-sidenav-item">Log Out</div></mat-list-item>
+      <mat-list-item><div class="am-sidenav-item">Log Out</div></mat-list-item>
+    </mat-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

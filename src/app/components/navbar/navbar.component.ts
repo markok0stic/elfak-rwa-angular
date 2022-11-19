@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     this.store.subscribe((state) => { this.user = state.userState.user });
   }
 
-  handleLog() {
+  handleLogOut() {
     if (this.user) {
       this.store.dispatch(logoutUser());
     } else {
