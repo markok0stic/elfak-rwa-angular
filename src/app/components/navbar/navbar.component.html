@@ -8,12 +8,32 @@
   *ngIf="this.user ===null">
   <mat-sidenav-content class="am-sidenav-content">
     <mat-list>
-      <mat-list-item (click)="handleLogOut()" class="am-sidenav-logo"></mat-list-item>
-    </mat-list>
-    <mat-list>
-      <mat-list-item (click)="handleLogOut()" class="am-btn-logout"><div class="am-sidenav-item">Log Out</div></mat-list-item>
-      <mat-list-item><div class="am-sidenav-item">Log Out</div></mat-list-item>
-      <mat-list-item><div class="am-sidenav-item">Log Out</div></mat-list-item>
+      <mat-list-item (click)="this.navigate('')">
+        <div class="am-sidenav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <a>CALENDAR</a>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item (click)="this.navigate('period-scheduler')">
+        <div class="am-sidenav-item">
+          <i class="fa-solid fa-business-time"></i>
+          <a>SCHEDULE PERIOD</a>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item (click)="this.navigate('register')" *ngIf="this.user.role === 'admin'">
+        <div class="am-sidenav-item">
+          <a>REGISTER USER</a>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item (click)="handleLogOut()" class="am-btn-logout">
+        <div class="am-sidenav-item">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <a>LOG OUT</a>
+        </div>
+      </mat-list-item>
     </mat-list>
   </mat-sidenav-content>
 </mat-sidenav-container>
