@@ -1,1 +1,49 @@
-<p>Component workds</p>
+<div class="am-register-wrapper">
+  <mat-card class="am-register-pad">
+    <mat-card-content>
+      <form class="form-items">
+
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input type="text" name="firstname" [formControl]="firstName" required matInput placeholder="Ted"/>
+          <mat-error *ngIf="firstName.invalid">Please insert valid first name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input type="text" name="lastname" [formControl]="firstName" required matInput placeholder="Ex"/>
+          <mat-error *ngIf="lastName.invalid">Please insert valid last name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="text" name="email" [formControl]="email" required matInput placeholder="example@example.com"/>
+          <mat-error *ngIf="email.invalid">Please insert valid email address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" name="password" [formControl]="password" required matInput placeholder="******"/>
+          <mat-error *ngIf="password.invalid">Please insert your password</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input type="text" name="phone" [formControl]="phone" required matInput placeholder="+012345678912"/>
+          <mat-error *ngIf="lastName.invalid">Please insert valid last name</mat-error>
+        </mat-form-field>
+
+        <button class="am-login-btn"
+                mat-raised-button
+                disabled="{{ loading }}"
+                (click)="handleSubmit()">
+          Register
+        </button>
+
+      </form>
+    </mat-card-content>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>

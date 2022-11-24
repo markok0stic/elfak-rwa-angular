@@ -1,8 +1,3 @@
-<div class="am-body-class" *ngIf="this.user !== null">
-  <app-login></app-login>
-</div>
-
-
 <mat-sidenav-container
   class="am-sidenav"
   *ngIf="this.user ===null">
@@ -22,9 +17,17 @@
         </div>
       </mat-list-item>
 
-      <mat-list-item (click)="this.navigate('register')" *ngIf="this.user.role === 'admin'">
+      <mat-list-item (click)="this.navigate('register-user')" >
         <div class="am-sidenav-item">
+          <i class="fa-solid fa-user-plus"></i>
           <a>REGISTER USER</a>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item (click)="this.navigate('request-checker')" >
+        <div class="am-sidenav-item">
+          <i class="fa-solid fa-check"></i>
+          <a>CHECK REQUESTS</a>
         </div>
       </mat-list-item>
 

@@ -1,23 +1,15 @@
-.register-cont {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: calc(100% - 64px);
+.am-register-wrapper{
+  width: 680px;
+  height: 100vh;
+
 }
 .form-items {
   display: flex;
   flex-direction: column;
 }
-.row-div {
-  display: flex;
-}
-.row-item {
-  margin-left: 10px;
-}
-.nav-text {
-  font-weight: 500;
-  color: #3F51B5;
-  cursor: pointer;
+.am-register-pad{
+  position: relative;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
