@@ -38,6 +38,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { FullCalendarModule } from "@fullcalendar/angular";
 import interactionPlugin  from "@fullcalendar/interaction";
 import daygridPlugin  from "@fullcalendar/daygrid";
+import { PeriodSchedulerComponent } from './components/period-scheduler/period-scheduler.component';
 
 FullCalendarModule.registerPlugins([interactionPlugin, daygridPlugin])
 @NgModule({
@@ -48,6 +49,7 @@ FullCalendarModule.registerPlugins([interactionPlugin, daygridPlugin])
     RegisterComponent,
     HomeComponent,
     CalendarComponent,
+    PeriodSchedulerComponent,
   ],
     imports: [
         BrowserModule,
