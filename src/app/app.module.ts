@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {userReducer} from "./store/user/user/user.reducer";
+import {userReducer} from "./store/user/user.reducer";
 import {AppState} from "./app.state";
 import {StoreModule} from "@ngrx/store";
 import {EffectsModule} from "@ngrx/effects";
-import {UserEffects} from "./store/user/user/user.effects";
+import {UserEffects} from "./store/user/user.effects";
 import {InterceptorService} from "./auth/interceptor";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -34,14 +34,20 @@ import {MatInputModule} from "@angular/material/input";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {HomeComponent} from "./components/home/home.component";
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { FullCalendarModule } from "@fullcalendar/angular";
+import interactionPlugin  from "@fullcalendar/interaction";
+import daygridPlugin  from "@fullcalendar/daygrid";
 
+FullCalendarModule.registerPlugins([interactionPlugin, daygridPlugin])
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    CalendarComponent,
   ],
     imports: [
         BrowserModule,
@@ -49,7 +55,6 @@ import {HomeComponent} from "./components/home/home.component";
         FormsModule,
         ReactiveFormsModule,
         AppRoutingModule,
-
 
         StoreModule.forRoot<AppState>({
             userState: userReducer,
@@ -79,6 +84,7 @@ import {HomeComponent} from "./components/home/home.component";
         MatInputModule,
         BrowserAnimationsModule,
         MatSidenavModule,
+        FullCalendarModule
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },

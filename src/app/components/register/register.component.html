@@ -1,8 +1,8 @@
 <div class="am-register-wrapper">
+  <h1>Register employee</h1>
   <mat-card class="am-register-pad">
     <mat-card-content>
       <form class="form-items">
-
         <mat-form-field appearance="outline">
           <mat-label>First Name</mat-label>
           <input type="text" name="firstname" [formControl]="firstName" required matInput placeholder="Ted"/>
@@ -11,7 +11,7 @@
 
         <mat-form-field appearance="outline">
           <mat-label>Last Name</mat-label>
-          <input type="text" name="lastname" [formControl]="firstName" required matInput placeholder="Ex"/>
+          <input type="text" name="lastname" [formControl]="lastName" required matInput placeholder="Ex"/>
           <mat-error *ngIf="lastName.invalid">Please insert valid last name</mat-error>
         </mat-form-field>
 
@@ -30,10 +30,10 @@
         <mat-form-field appearance="outline">
           <mat-label>Phone</mat-label>
           <input type="text" name="phone" [formControl]="phone" required matInput placeholder="+012345678912"/>
-          <mat-error *ngIf="lastName.invalid">Please insert valid last name</mat-error>
+          <mat-error *ngIf="lastName.invalid">Please insert valid phone number</mat-error>
         </mat-form-field>
 
-        <button class="am-login-btn"
+        <button class="am-register-btn"
                 mat-raised-button
                 disabled="{{ loading }}"
                 (click)="handleSubmit()">

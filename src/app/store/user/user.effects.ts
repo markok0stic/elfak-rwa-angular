@@ -7,7 +7,7 @@ import { setToken, setUser } from 'src/app/auth/user-context';
 import { LoginUser, User } from 'src/app/models/user';
 
 import * as UserActions from './user.actions';
-import {UserService} from "../../../services/user.service";
+import {UserService} from "../../services/user.service";
 
 @Injectable()
 export class UserEffects {

@@ -4,7 +4,7 @@ import {environment} from "../../../environments/environment";
 import {Store} from "@ngrx/store";
 import {Router} from "@angular/router";
 import {AppState} from "../../app.state";
-import {logoutUser} from "../../store/user/user/user.actions";
+import {logoutUser} from "../../store/user/user.actions";
 
 @Component({
   selector: 'app-navbar',

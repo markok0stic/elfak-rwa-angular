@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 import {AppState} from "../../app.state";
 import {Store} from "@ngrx/store";
 import {RegisterUser} from "../../models/user";
-import {registerUser} from "../../store/user/user/user.actions";
+import {registerUser} from "../../store/user/user.actions";
 
 @Component({
   selector: 'app-register',

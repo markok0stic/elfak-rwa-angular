@@ -1,15 +1,18 @@
 .am-register-wrapper{
   width: 680px;
   height: 100vh;
-
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .form-items {
   display: flex;
   flex-direction: column;
 }
-.am-register-pad{
-  position: relative;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.am-register-btn{
+  background-color: #282747;
+  color: white;
 }
+
+

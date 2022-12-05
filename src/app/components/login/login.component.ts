@@ -3,7 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 import {Router} from "@angular/router";
 import {Store} from "@ngrx/store";
 import {AppState} from "../../app.state";
-import {loginUser} from "../../store/user/user/user.actions";
+import {loginUser} from "../../store/user/user.actions";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
