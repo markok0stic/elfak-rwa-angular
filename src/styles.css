@@ -9,7 +9,7 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: #f8f8f8;
+  background-color: rgba(157,136,144,1);
 }
 .am-root{
   display: flex;
