@@ -29,5 +29,7 @@ app-home {
 }
 app-period-scheduler{
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 

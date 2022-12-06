@@ -1,12 +1,16 @@
 <app-requests-table></app-requests-table>
-<mat-card>
+<mat-card class="am-req">
   <mat-card-content>
-    <form>
-      <mat-label>Reason:</mat-label>
-        <input type="text">
-
-      <mat-label>Period</mat-label>
+    <form  class="am-request-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..." class="am-req-desc"></textarea>
+      </mat-form-field>
       <app-range-date-picker></app-range-date-picker>
+        <button class="am-req-btn"
+                mat-raised-button>
+          Send request
+        </button>
     </form>
   </mat-card-content>
 </mat-card>
