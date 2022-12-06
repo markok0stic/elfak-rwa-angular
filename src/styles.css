@@ -25,5 +25,9 @@ app-register {
 app-home {
   width: 100%;
   display: flex;
+  column-gap: 2em;
+}
+app-period-scheduler{
+  width: 100%;
 }
 

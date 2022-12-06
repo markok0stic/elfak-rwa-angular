@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./period-scheduler.component.css']
 })
 export class PeriodSchedulerComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
