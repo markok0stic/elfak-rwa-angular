@@ -18,11 +18,13 @@ import {MatTableDataSource} from "@angular/material/table";
 })
 
 export class RequestsTableComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'description', 'period', 'status'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  constructor() {}
+  constructor() {
+    console.log(ELEMENT_DATA[0].period)
+  }
 
   ngOnInit(): void {
   }
