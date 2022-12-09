@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "user": {
+        "id": "1",
+        "email": "mkostic@gmail.com",
+        "role": "user",
+        "firstName": "Marko",
+        "lastName": "Kostic",
+        "phone": "12345678"
+      },
+      "access_token": "123123123213"
+    }
+   ]
+}

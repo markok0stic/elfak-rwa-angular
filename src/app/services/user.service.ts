@@ -10,6 +10,8 @@ export class UserService {
   constructor(private httpClient: HttpClient) {}
 
   login(email: string, password: string) {
+    return this.httpClient.get<LoginUser>(`${environment.api}/users?id=1`);
+
     return this.httpClient.post<LoginUser>(`${environment.api}/users/login`, {
       email,
       password,
