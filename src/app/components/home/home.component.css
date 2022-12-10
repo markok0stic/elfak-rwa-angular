@@ -9,3 +9,9 @@
   width: 1050px;
   min-width: 350px;
 }
+.am-body-class {
+  width: 100%;
+  height: 100%;
+  background: #003f8c;
+  background: linear-gradient(152deg, #003f8c 63%, #0073ec 100%);
+}

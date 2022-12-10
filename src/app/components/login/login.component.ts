@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  handleSubmit() {
+  handleSubmit() {/*
     if (!this.email.value || !this.password.value) return;
 
     this.store.dispatch(
@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
         email: this.email.value,
         password: this.password.value,
       })
-    );
+    );*/
+    this.router.navigate(['']);
   }
 
   navigate(path: string) {

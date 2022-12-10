@@ -6,7 +6,7 @@ import {PeriodSchedulerComponent} from "./components/period-scheduler/period-sch
 
 const routes: Routes = [
 
-  { path: '', component: HomeComponent/*, canActivate: [AuthGuard], data: { role: Roles.Admin },*/ },
+  { path: 'home', component: HomeComponent/*, canActivate: [AuthGuard], data: { role: Roles.Admin },*/ },
   { path: 'register-user', component: RegisterComponent/*, canActivate: [AuthGuard], data: { role: Roles.Admin },*/ },
   { path: 'schedule-period', component: PeriodSchedulerComponent/*, canActivate: [AuthGuard], data: { role: Roles.Admin },*/ }
 ];

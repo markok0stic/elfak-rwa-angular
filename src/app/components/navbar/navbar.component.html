@@ -1,6 +1,6 @@
 <mat-sidenav-container
   class="am-sidenav"
-  *ngIf="this.user ===null">
+  *ngIf="this.user !== null">
   <mat-sidenav-content class="am-sidenav-content">
     <mat-list>
       <mat-list-item (click)="this.navigate('')">
@@ -40,4 +40,5 @@
     </mat-list>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
 

@@ -1,3 +1,7 @@
-<div class="am-calendar-wrapper">
+<app-login class="am-body-class" *ngIf="this.user == null"></app-login>
+<!--
+<app-navbar class="am-navbar-wrapper" *ngIf="this.user !== null"></app-navbar>
+<div class="am-calendar-wrapper" *ngIf="this.user !== null">
   <app-calendar class="am-calendar"></app-calendar>
 </div>
+-->

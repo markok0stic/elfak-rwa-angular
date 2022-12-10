@@ -30,7 +30,7 @@
 }
 .am-login-btn
 {
-  background-color: #282747;
+  background-color: #0073ec;
   color: white;
 }
 .am-login-image{
@@ -42,7 +42,7 @@
 .am-login-welcome{
   font-size: 34px;
   font-weight: bold;
-  color: rgb(124,96,107);
+  color: #0073ec;
   margin-left: 90px;
   opacity: 30%;
 }
@@ -64,12 +64,12 @@
 }
 .nav-text {
   font-weight: 500;
-  color: #3F51B5;
+  color: #0073ec;
   cursor: pointer;
 }
 .nav-text-small {
   margin-top: 10px;
   text-align: center;
-  color: #3F51B5;
+  color: #0073ec;
   cursor: pointer;
 }
